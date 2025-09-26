@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - Best-Inn Hotels</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function handleContact(event) {
+      event.preventDefault();
+      alert("Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.");
+      window.location.href = "index.html"; // Terug naar home
+    }
+  </script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Best-Inn Hotels</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="offers.html">Aanbiedingen</a></li>
+          <li class="nav-item"><a class="nav-link active" href="form.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- Contact Form -->
+  <section class="container my-5 pt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="text-danger mb-4">Neem contact met ons op</h1>
+        <p class="mb-4">Heeft u vragen of wilt u meer informatie? Vul het formulier in en wij nemen zo snel mogelijk contact met u op.</p>
+ 
+        <form onsubmit="handleContact(event)">
+          <div class="mb-3">
+            <label for="name" class="form-label">Naam</label>
+            <input type="text" class="form-control" id="name" placeholder="Uw naam" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mailadres</label>
+            <input type="email" class="form-control" id="email" placeholder="uw@email.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Onderwerp</label>
+            <input type="text" class="form-control" id="subject" placeholder="Onderwerp van uw bericht" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Bericht</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Uw bericht..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-warning">Verstuur Bericht</button>
+        </form>
+      </div>
+    </div>
+ 
+    <!-- Contact Info -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-6 text-center">
+        <h3 class="mb-3 text-danger">Onze gegevens</h3>
+        <p><strong>📍 Adres:</strong> Hoofdstraat 12, 1011 AB Amsterdam</p>
+        <p><strong>📞 Telefoon:</strong> +31 20 123 4567</p>
+        <p><strong>✉️ E-mail:</strong> info@bestinnhotels.nl</p>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Footer -->
+  <footer class="text-center py-3">
+    <p>© 2025 Best-Inn Hotels – Geniet van uw verblijf!</p>
+  </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
